@@ -1,15 +1,15 @@
-image: Ubuntu
+image: Ubuntu  # образ для сборки
 
-stack: jdk 11
+stack: jdk 11  # версия JDK
 
 branches:
   only:
-    - main
+    - main  # ветка git
 
-build: off
+build: off  # будем использовать свой скрипт сборки
 
 install:
-
+  # запускаем SUT (& означает, что в фоновом режиме - не блокируем терминал для запуска тестов)
   - java -jar ./artifacts/app-card-delivery.jar &
 
 build_script:
