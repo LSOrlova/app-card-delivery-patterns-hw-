@@ -42,7 +42,7 @@ class CardDeliveryTest {
     @Test
     void testHappyPathReOrderMeeting() {
         int daysToAddFirstMeeting = 3;
-        int daysToAddSecondMeeting = 3;
+        int daysToAddSecondMeeting = 7;
         String firstMeetingDate = DataGenerator.generateDate(daysToAddFirstMeeting);
         String secondMeetingDate = DataGenerator.generateDate(daysToAddSecondMeeting);
         SelenideElement form = $("[action='/']");
