@@ -55,6 +55,7 @@ class CardDeliveryTest {
         $("[data-test-id='success-notification']").shouldHave(text("Встреча успешно запланирована на "
                 + firstMeetingDate));
         $(".button").click();
+        $("[placeholder=\"Дата встречи\"]").doubleClick().sendKeys(secondMeetingDate);
         $("[data-test-id='replan-notification']").shouldHave(text("У вас уже запланирована встреча на другую дату." +
                 " Перепланировать?"));
         $(byText("Перепланировать")).click();
